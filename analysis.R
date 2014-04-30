@@ -2,9 +2,12 @@
 
 library(smatr)
 
+source("R/data-fun.R")
 source("R/model-fun.R")
 source("R/utils.R")
 source("R/Figs.R")
+
+build.dataset.mammals()
 
 if(!file.exists("output"))
 	dir.create("output")

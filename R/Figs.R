@@ -26,9 +26,9 @@ Fig2 <- function() {
 
     # 1. Annual reproductive output
     # MAMMALS
-    i <- !is.na(data$mammals$Wa * data$mammals$RI)
+    i <- !is.na(data$mammals$Wa * data$mammals$A)
     X <- data$mammals$Wa[i]
-    Y <- data$mammals$RI[i]
+    Y <- data$mammals$A[i]
     Y_ax <- seq.log(10^-6, 10^4, 10)
     X_ax <- seq.log(10^-6, 10^4, 10)
     X_lab <- Y_lab <- c(expression(10^-6), expression(10^-5), expression(10^-4), expression(10^-3),
@@ -67,9 +67,9 @@ Fig2 <- function() {
 
 
     # 3. Lifetime RI (mammals)
-    i <- !is.na(data$mammals$Wa * data$mammals$Ea * data$mammals$RI)
+    i <- !is.na(data$mammals$Wa * data$mammals$E * data$mammals$A)
     X <- data$mammals$Wa[i]
-    Y <- data$mammals$Ea[i] * data$mammals$RI[i]
+    Y <- data$mammals$E[i] * data$mammals$A[i]
 
     par(pty = "s")
     plot(X, Y, type = "p", log = "xy", axes = FALSE, ann = FALSE, ylim = c(min(Y_ax),
