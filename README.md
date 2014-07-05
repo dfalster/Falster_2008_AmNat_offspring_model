@@ -28,12 +28,12 @@ A separate file  `analytical_solutions.m` contains matlab code used to derive th
 
 ## Citation
 
-For archival purposes, the code used to produce figures for publication has been lodged with figshare [here](). This is the same as code included in [this github release]().
+For archival purposes, the code used to produce figures for publication has been lodged with figshare [here](http://dx.doi.org/10.6084/m9.figshare.1094315). This is the same as code included in [this github release](https://github.com/dfalster/Falster_2008_AmNat_offspring_model/releases/tag/1.0).
 
 To cite this code:
 
 ```
-
+Falster, Daniel (2014): Code from: A general model for the scaling of offspring size and adult size. figshare. http://dx.doi.org/10.6084/m9.figshare.1094315
 ```
 
 ## Further details
