@@ -38,9 +38,6 @@ To cite this code:
 
 ## Further details
 
-Please note:
-
 - This code was archived post-publication, so there is no link to the code at the journal's website.
-- The code included in this release has been slightly restructured to improve readability and code quality. The version run for publication is available [here]().
-- Code was written between 2006-2008 by Daniel Falster.
-- While I have endeavoured to make the code more readable, it's still a little arcane - my apologies for that.
+- The code included in this release has been slightly restructured to improve readability and code quality. Original code was written between 2006-2008 by Daniel Falster, then updated in 2014. The version run at time of publication is available [here](https://github.com/dfalster/Falster_2008_AmNat_offspring_model/tree/c06c5de3a54b4589581b2f74b2c9fc5d1529fd6d) (NB - does not include data). While I have endeavoured to make the code more readable, it's still a little arcane - my apologies for that.
+- More information about the data used in this analysis is available in the file [data/README.md](data/README.md)
