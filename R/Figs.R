@@ -15,6 +15,7 @@ load.data <- function(){
         blank.lines.skip = TRUE)
 	plants <-  read.table("data/plants.txt", header = TRUE, sep = "\t", strip.white = TRUE,
         blank.lines.skip = TRUE)
+    plants$Wa <- plants$plant_dry_mass * plants$mass_adjustment
 	list(mammals=mammals, plants=plants)
 }
 

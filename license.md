@@ -1,4 +1,4 @@
-All code (all R files, script files and Makefiles) is under the [MIT licence](http://opensource.org/licenses/MIT):
+All code (all R files, script files and Makefiles, but not data) is under the [MIT licence](http://opensource.org/licenses/MIT):
 
 > Copyright (c) 2014 Daniel S. Falster
 
