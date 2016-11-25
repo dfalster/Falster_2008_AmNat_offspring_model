@@ -12,6 +12,12 @@ Falster, D.S., Moles, A.T. & Westoby, M. (2008) A general model for the scaling 
 
 ## Running
 
+This analysis uses the package [smatr](cran.r-project.org/package=smatr), described in [Warton et al 2013](http://doi.org/10.1111/j.2041-210X.2011.00153.x). To install, open R and run
+
+```
+install.packages("smatr")
+```
+
 To reproduce the figures from the paper, open a terminal window and run the command
 
 ```
@@ -23,6 +29,8 @@ Alternative you can open `R` and type
 ```
 source(`analysis.R`)
 ```
+
+Note the equations in the figures 4-6 were added outside of R so will not be visible in the generated figures.
 
 A separate file  `analytical_solutions.m` contains matlab code used to derive the analytical solution reported in the paper.
 
