@@ -12,13 +12,15 @@ Falster, D.S., Moles, A.T. & Westoby, M. (2008) A general model for the scaling 
 
 ## Instructions
 
-All analyses were done in `R`. To reproduce the key results from this paper, run the code contained in the `analysis.R` file. This project uses the package [smatr](cran.r-project.org/package=smatr), described in [Warton et al 2013](http://doi.org/10.1111/j.2041-210X.2011.00153.x), which must first be installed if running on your own machine, using: 
+All analyses were done in `R`. To reproduce the key results from this paper, run the code contained in the `analysis.R` file. 
+
+If reproducing these results on your own machine, you much first install the package [smatr](cran.r-project.org/package=smatr), described in [Warton et al 2013](http://doi.org/10.1111/j.2041-210X.2011.00153.x):
   
 ```
 install.packages('smatr')
 ```
 
-Alternatively, you can use an run the `analysis.R` file with the required software pre-installed using an interactive RStudio session hosted by binder:
+Alternatively, you can use an interactive RStudio session to run the `analysis.R` file with the required software pre-installed. This session is hosted by binder and can be accessed by clicking on the following:
   
 [![RStudio session](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/smwindecker/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio)
 
