@@ -22,7 +22,7 @@ install.packages('smatr')
 
 Alternatively, you can use an interactive RStudio session to run the `analysis.R` file with the required software pre-installed. This session is hosted by binder and can be accessed by clicking on the following:
   
-[![RStudio session](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/smwindecker/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio)
+[![RStudio session](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dfalster/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio)
 
 Note the equations in the figures 4-6 were added outside of R so will not be visible in the generated figures.
 
