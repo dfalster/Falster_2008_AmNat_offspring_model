@@ -1,12 +1,13 @@
 Type: Compendium
 Package: Compendium
 Title: A general model for the scaling of offspring size and adult size
-Version: 0.0.1
+Version: 1.0.1
 Authors@R: c(
     person(given = "Daniel",
            family = "Falster",
            role = c("aut", "cre"),
-           email = "daniel.falster@unsw.edu.au"),
+           email = "daniel.falster@unsw.edu.au",
+           c(ORCID = "0000-0002-9814-092X")),
     person(given = "Angela", 
            family = "Moles",
            role = "aut"),
