@@ -10,25 +10,9 @@ Falster, D.S., Moles, A.T. & Westoby, M. (2008) A general model for the scaling 
 
 **Abstract:** Understanding evolutionary co-ordination among different life-history traits is a key challenge for ecology and evolution. Here, we develop a general quantitative model predicting how offspring size should scale with adult size by combining a simple model for life-history evolution with a frequency-dependent survivorship model. The key innovation is that larger offspring are afforded three different advantages during ontogeny: higher survivorship per time, a shortened juvenile phase, and advantage during size-competitive growth. In this model, it turns out that size-asymmetric advantage during competition is the factor driving evolution towards larger offspring sizes. For simplified and limiting cases the model is shown to produce the same predictions as the previously existing theory it is founded on. The explicit treatment of different survival advantages has biologically important new effects, mainly through an interaction between total maternal investment in reproduction and the duration of competitive growth. This leads on to explain alternative allometries between log offspring size and log adult size, as observed in mammals (slope=0.95) and plants (slope=0.54). Further, it suggests how these differences relate quantitatively to specific biological processes during recruitment. In these ways the model generalizes across previous theory and provides explanations for some differences between major taxa.
 
-## Running
+## Instructions
 
-This analysis uses the package [smatr](cran.r-project.org/package=smatr), described in [Warton et al 2013](http://doi.org/10.1111/j.2041-210X.2011.00153.x). To install, open R and run
-
-```
-install.packages("smatr")
-```
-
-To reproduce the figures from the paper, open a terminal window and run the command
-
-```
-make
-```
-
-Alternative you can open `R` and type
-
-```
-source(`analysis.R`)
-```
+All analyses were done in `R`. This project uses the package [smatr](cran.r-project.org/package=smatr), described in [Warton et al 2013](http://doi.org/10.1111/j.2041-210X.2011.00153.x). To reproduce the entire paper with the required software and all installations, you can run the analysis.R file in this [![interactive RStudio session](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/smwindecker/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio) hosted by binder. 
 
 Note the equations in the figures 4-6 were added outside of R so will not be visible in the generated figures.
 
