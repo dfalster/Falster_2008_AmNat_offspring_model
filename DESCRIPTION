@@ -1,0 +1,22 @@
+Type: Compendium
+Package: Compendium
+Title: A general model for the scaling of offspring size and adult size
+Version: 0.0.1
+Authors@R: c(
+    person(given = "Daniel",
+           family = "Falster",
+           role = c("aut", "cre"),
+           email = "daniel.falster@unsw.edu.au"),
+    person(given = "Angela", 
+           family = "Moles",
+           role = "aut"),
+    person(given = "Mark", 
+           family = "Westoby",
+           role = "aut")
+    )
+Description: This repository contains code needed to reproduce the article: Falster, D.S., Moles, A.T. & Westoby, M. (2008) A general model for the scaling of offspring size and adult size. American Naturalist 172: 299–317. DOI: [10.1086/589889](http://doi.org/10.1086/589889)
+License: license.md
+Depends: 
+    smatr
+Encoding: UTF-8
+LazyData: true
