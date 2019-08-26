@@ -12,7 +12,9 @@ Falster, D.S., Moles, A.T. & Westoby, M. (2008) A general model for the scaling 
 
 ## Instructions
 
-All analyses were done in `R`. This project uses the package [smatr](cran.r-project.org/package=smatr), described in [Warton et al 2013](http://doi.org/10.1111/j.2041-210X.2011.00153.x). To reproduce the entire paper with the required software and all installations, you can run the analysis.R file in this [![interactive RStudio session](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/smwindecker/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio) hosted by binder. 
+All analyses were done in `R`. This project uses the package [smatr](cran.r-project.org/package=smatr), described in [Warton et al 2013](http://doi.org/10.1111/j.2041-210X.2011.00153.x). To reproduce the entire paper with the required software and all installations, you can run the analysis.R file in this interactive RStudio session hosted by binder:
+
+[![RStudio session](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/smwindecker/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio)
 
 Note the equations in the figures 4-6 were added outside of R so will not be visible in the generated figures.
 
