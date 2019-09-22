@@ -59,7 +59,7 @@ If you have Docker installed, you can recreate the compute environment as follow
 First clone this repository:
 
 ```
-git clone https://github.com/traitecoevo/Falster_2008_AmNat_offspring_model.git
+git clone https://github.com/dfalster/Falster_2008_AmNat_offspring_model.git
 ```
 
 Then fetch the container:
