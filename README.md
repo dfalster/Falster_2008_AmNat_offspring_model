@@ -84,5 +84,5 @@ For posterity, the docker image was built off [`rocker/verse:3.6.1` container](h
 docker build -t traitecoevo/falster_2008_amnat_offspring_model .
 ```
 
-and was then pushed to [dockerhub](https://cloud.docker.com/u/traitecoevo/repository/docker/traitecoevo/falster_2008_amnat_offspring_model). The image used by binder builds off this container, adding extra features needed bi binder, as described in [rocker/binder](https://hub.docker.com/r/rocker/binder/dockerfile).
+and was then pushed to [dockerhub](https://cloud.docker.com/u/traitecoevo/repository/docker/traitecoevo/falster_2008_amnat_offspring_model). The image used by binder builds off this container, adding extra features needed by binder, as described in [rocker/binder](https://hub.docker.com/r/rocker/binder/dockerfile).
 
