@@ -30,7 +30,7 @@ To ensure long-term [computational reproducibility](https://www.britishecologica
 
 - `data/`: Raw data
 - `R/` directory containing functions used in analysis
-- `DECRIPTION`: A machine-readable [compendium]() file containing key metadata and dependencies 
+- `DESCRIPTION`: A machine-readable [compendium]() file containing key metadata and dependencies 
 - `license.md`: License for the materials
 - `Dockerfile` & `.binder/Dockerfile`: files used to generate docker containers for long-term reproducibility
 - `analytical_solutions.m`: contains matlab code used to derive the analytical solution reported in the paper
