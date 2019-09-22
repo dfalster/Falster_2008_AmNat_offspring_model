@@ -10,9 +10,9 @@ Falster, D.S., Moles, A.T. & Westoby, M. (2008) A general model for the scaling 
 
 **Abstract:** Understanding evolutionary co-ordination among different life-history traits is a key challenge for ecology and evolution. Here, we develop a general quantitative model predicting how offspring size should scale with adult size by combining a simple model for life-history evolution with a frequency-dependent survivorship model. The key innovation is that larger offspring are afforded three different advantages during ontogeny: higher survivorship per time, a shortened juvenile phase, and advantage during size-competitive growth. In this model, it turns out that size-asymmetric advantage during competition is the factor driving evolution towards larger offspring sizes. For simplified and limiting cases the model is shown to produce the same predictions as the previously existing theory it is founded on. The explicit treatment of different survival advantages has biologically important new effects, mainly through an interaction between total maternal investment in reproduction and the duration of competitive growth. This leads on to explain alternative allometries between log offspring size and log adult size, as observed in mammals (slope=0.95) and plants (slope=0.54). Further, it suggests how these differences relate quantitatively to specific biological processes during recruitment. In these ways the model generalizes across previous theory and provides explanations for some differences between major taxa.
 
-## Instructions
+## Running the code
 
-All analyses were done in `R`. To reproduce the key results from this paper, run the code contained in the `analysis.R` file. 
+All analyses were done in `R`. You can reproduce the results for this project by running the code in the `analysis.R` file. Figures will be output to a directory called `output`. 
 
 If reproducing these results on your own machine, you much first install the package [smatr](cran.r-project.org/package=smatr), described in [Warton et al 2013](http://doi.org/10.1111/j.2041-210X.2011.00153.x):
   
@@ -20,13 +20,28 @@ If reproducing these results on your own machine, you much first install the pac
 install.packages('smatr')
 ```
 
-Alternatively, you can use an interactive RStudio session to run the `analysis.R` file with the required software pre-installed. This session is hosted by binder and can be accessed by clicking on the following:
-  
-[![RStudio session](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dfalster/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio)
+To ensure long-term [computational reproducibility](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) of this work into the future, we have created a [Docker](http://dockerhub.com) image to enable others to reproduce these results using the same software and versions we used to conduct the original analysis. You can access an interactive RStudio session with the required software pre-installed by opening a container hosted by [Binder](http://mybinder.org): 
 
-Note the equations in the figures 4-6 were added outside of R so will not be visible in the generated figures.
+[![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dfalster/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio)
 
-A separate file  `analytical_solutions.m` contains matlab code used to derive the analytical solution reported in the paper.
+Alternatively, you can use docker on your local machine. Instructions for this are at bottom of the page. 
+
+## Material included in the repository include:
+
+- `data/`: Raw data
+- `R` directory containing functions used in analysis
+- `ms` directory containing manuscript in LaTeX and accompanying style files 
+- `DECRIPTION`: A machine-readable [compendium]() file containing key metadata and dependencies 
+- `LICENSE`: License for the materials
+- `Dockerfile` & `.binder/Dockerfile`: files used to generate docker containers for long-term reproducibility
+- `analytical_solutions.m`: contains matlab code used to derive the analytical solution reported in the paper
+
+## Further details
+
+- The equations in the Figures 4-6 were added outside of R so will not be visible in the generated figures.
+- This code was archived post-publication, so there is no link to the code at the journal's website.
+- The code included in this release has been slightly restructured to improve readability and code quality. Original code was written between 2006-2008 by Daniel Falster, then updated in 2014. The version run at time of publication is available [here](https://github.com/dfalster/Falster_2008_AmNat_offspring_model/tree/c06c5de3a54b4589581b2f74b2c9fc5d1529fd6d) (NB - does not include data). While I have endeavoured to make the code more readable, it's still a little arcane - my apologies for that.
+- More information about the data used in this analysis is available in the file [data/README.md](data/README.md)
 
 ## Citation
 
@@ -38,8 +53,38 @@ To cite this code:
 Falster, Daniel (2014): Code from: A general model for the scaling of offspring size and adult size. figshare. http://dx.doi.org/10.6084/m9.figshare.1094315
 ```
 
-## Further details
+## Running via Docker
 
-- This code was archived post-publication, so there is no link to the code at the journal's website.
-- The code included in this release has been slightly restructured to improve readability and code quality. Original code was written between 2006-2008 by Daniel Falster, then updated in 2014. The version run at time of publication is available [here](https://github.com/dfalster/Falster_2008_AmNat_offspring_model/tree/c06c5de3a54b4589581b2f74b2c9fc5d1529fd6d) (NB - does not include data). While I have endeavoured to make the code more readable, it's still a little arcane - my apologies for that.
-- More information about the data used in this analysis is available in the file [data/README.md](data/README.md)
+If you have Docker installed, you can recreate the compute environment as follows. 
+
+First clone this repository:
+
+```
+git clone https://github.com/traitecoevo/Falster_2008_AmNat_offspring_model.git
+```
+
+Then fetch the container:
+
+```
+docker pull traitecoevo/falster_2008_amnat_offspring_model
+```
+
+From within your downloaded repo, launch the container using the following code (it will map your current working directory inside the docker container): 
+
+```
+docker run --user root -v $(pwd):/home/rstudio/ -p 8787:8787 -e DISABLE_AUTH=true traitecoevo/falster_2008_amnat_offspring_model
+```
+
+The code above initialises a docker container, which runs an rstudio session, which is accessed by pointing your browser to [localhost:8787](http://localhost:8787). For more instructions on running docker, see the info from [rocker](https://hub.docker.com/r/rocker/rstudio).
+
+### NOTE:Building the docker images 
+
+For posterity, the docker image was built off [`rocker/verse:3.6.1` container](https://hub.docker.com/r/rocker/verse) via the following command, in a terminal contained within the downloaded repo:
+
+```
+docker build -t traitecoevo/growth_trait_metaanalysis .
+```
+
+and was then pushed to dockerhub ([here](https://cloud.docker.com/u/traitecoevo/repository/docker/traitecoevo/growth_trait_metaanalysis)). The image used by binder builds off this container, adding extra features needed bi binder, as described in [rocker/binder](https://hub.docker.com/r/rocker/binder/dockerfile).
+
+
