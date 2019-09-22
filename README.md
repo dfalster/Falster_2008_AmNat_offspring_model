@@ -20,19 +20,18 @@ If reproducing these results on your own machine, you much first install the pac
 install.packages('smatr')
 ```
 
-To ensure long-term [computational reproducibility](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) of this work into the future, we have created a [Docker](http://dockerhub.com) image to enable others to reproduce these results using the same software and versions we used to conduct the original analysis. You can access an interactive RStudio session with the required software pre-installed by opening a container hosted by [Binder](http://mybinder.org): 
+You can access an interactive RStudio session with the required software pre-installed by opening a container hosted by [Binder](http://mybinder.org): 
 
 [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dfalster/Falster_2008_AmNat_offspring_model/master?urlpath=rstudio)
 
-Alternatively, you can use docker on your local machine. Instructions for this are at bottom of the page. 
+To ensure long-term [computational reproducibility](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) of this work, we have created a [Docker](http://dockerhub.com) image to enable others to reproduce these results on their local machines using the same software and versions we used to conduct the original analysis. Instructions for this are at bottom of the page. 
 
 ## Material included in the repository include:
 
 - `data/`: Raw data
-- `R` directory containing functions used in analysis
-- `ms` directory containing manuscript in LaTeX and accompanying style files 
+- `R/` directory containing functions used in analysis
 - `DECRIPTION`: A machine-readable [compendium]() file containing key metadata and dependencies 
-- `LICENSE`: License for the materials
+- `license.md`: License for the materials
 - `Dockerfile` & `.binder/Dockerfile`: files used to generate docker containers for long-term reproducibility
 - `analytical_solutions.m`: contains matlab code used to derive the analytical solution reported in the paper
 
@@ -77,14 +76,15 @@ docker run --user root -v $(pwd):/home/rstudio/ -p 8787:8787 -e DISABLE_AUTH=tru
 
 The code above initialises a docker container, which runs an rstudio session, which is accessed by pointing your browser to [localhost:8787](http://localhost:8787). For more instructions on running docker, see the info from [rocker](https://hub.docker.com/r/rocker/rstudio).
 
-### NOTE:Building the docker images 
+### NOTE: Building the docker image
 
 For posterity, the docker image was built off [`rocker/verse:3.6.1` container](https://hub.docker.com/r/rocker/verse) via the following command, in a terminal contained within the downloaded repo:
 
 ```
-docker build -t traitecoevo/growth_trait_metaanalysis .
+docker build -t traitecoevo/falster_2008_amnat_offspring_model .
 ```
 
-and was then pushed to dockerhub ([here](https://cloud.docker.com/u/traitecoevo/repository/docker/traitecoevo/growth_trait_metaanalysis)). The image used by binder builds off this container, adding extra features needed bi binder, as described in [rocker/binder](https://hub.docker.com/r/rocker/binder/dockerfile).
+and was then pushed to dockerhub ([here](https://cloud.docker.com/u/traitecoevo/repository/docker/traitecoevo/falster_2008_amnat_offspring_model)). The image used by binder builds off this container, adding extra features needed bi binder, as described in [rocker/binder](https://hub.docker.com/r/rocker/binder/dockerfile).
 
+[![Layers and Size](https://images.microbadger.com/badges/image/traitecoevo/falster_2008_amnat_offspring_model.svg)](https://registry.hub.docker.com/u/traitecoevo/falster_2008_amnat_offspring_model/)
 
