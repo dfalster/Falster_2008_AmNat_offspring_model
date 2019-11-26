@@ -7,7 +7,7 @@ Authors@R: c(
            family = "Falster",
            role = c("aut", "cre"),
            email = "daniel.falster@unsw.edu.au",
-           c(ORCID = "0000-0002-9814-092X")),
+           comment = c(ORCID = "0000-0002-9814-092X")),
     person(given = "Angela", 
            family = "Moles",
            role = "aut"),
